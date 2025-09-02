@@ -32,8 +32,6 @@
   <!-- ✅ Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -57,10 +55,35 @@
       animation: fadeIn 1s ease-out;
     }
 
+    .header-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .headshot {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .headshot:hover {
+      transform: scale(1.02);
+    }
+
     h1 {
       color: #007acc;
       font-size: 2.2em;
       margin-bottom: 10px;
+      margin-top: 0;
     }
 
     h2 {
@@ -142,6 +165,18 @@
         padding: 20px;
       }
 
+      .header-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .headshot {
+        width: 150px;
+        height: 188px;
+      }
+
       h1 {
         font-size: 1.8em;
       }
@@ -150,9 +185,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>Sudhanva Kulkarni</h1>
-    <div class="about">
-      <p>Hello! I'm Sudhanva, a 4th year undergrad at UC Berkeley.</p>
+    <div class="header-section">
+      <div class="header-text">
+        <h1>Sudhanva Kulkarni</h1>
+        <div class="about">
+          <p>Hello! I'm Sudhanva, a 4th year undergrad at UC Berkeley.</p>
+        </div>
+      </div>
+      <img src="headshot.jpg" alt="Sudhanva Kulkarni" class="headshot">
     </div>
 
     <div class="classes">
